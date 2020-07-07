@@ -8,6 +8,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const cors = require('cors');
 const AppError = require('./utils/appError');
@@ -22,7 +23,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['http://localhost:3000'],
+    origin: '*',
     method: ['GET', 'POST'],
     credentials: true,
   })
@@ -93,6 +94,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 
 // Prevent paramter pollution
 app.use(hpp());
