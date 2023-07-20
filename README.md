@@ -1,7 +1,3 @@
-# natours-node
-
-Here is a draft README.md for a Natours Node.js project repository:
-
 # Natours - Node.js API
 
 This is the Node.js/Express API for the Natours application. Natours is a tour booking and reviews website. 
